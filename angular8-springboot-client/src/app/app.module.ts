@@ -8,13 +8,22 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
+import { CreateProdQueryComponent } from './create-customerprodquery/create-prodQuery.component'
+import { CustomerProdQueryDetailsComponent } from './customerprodquery-details/customerprodquery-details.component';
+import { CustomerProdQueryListComponent } from './customerprodquery-list/customerprodquery-list.component';
+import { UpdateCustomerProdQueryComponent } from './update-customerProdQuery/update-customerProdQuery.component';
+import { from } from 'rxjs';
 @NgModule({
   declarations: [
     AppComponent,
     CreateEmployeeComponent,
     EmployeeDetailsComponent,
     EmployeeListComponent,
-    UpdateEmployeeComponent
+    UpdateEmployeeComponent,
+    CustomerProdQueryDetailsComponent,
+    CreateProdQueryComponent,
+    CustomerProdQueryListComponent,
+    UpdateCustomerProdQueryComponent
   ],
   imports: [
     BrowserModule,
@@ -25,4 +34,5 @@ import { UpdateEmployeeComponent } from './update-employee/update-employee.compo
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

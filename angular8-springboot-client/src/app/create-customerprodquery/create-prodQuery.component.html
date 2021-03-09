@@ -1,0 +1,38 @@
+<div style="padding-left: 241px;">
+  <h3>Create Prod Query</h3>
+  <div [hidden]="submitted" style="width: 400px;">
+    <form (ngSubmit)="onSubmitProdQuery()">
+      <div class="form-group">
+        <label for="name">First Name</label>
+        <input type="text" class="form-control" id="firstName" required [(ngModel)]="prodQuery.firstName"
+          name="firstName">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Last Name</label>
+        <input type="text" class="form-control" id="lastName" required [(ngModel)]="prodQuery.lastName" name="lastName">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Mobile</label>
+        <input type="text" class="form-control" id="mobile" required [(ngModel)]="prodQuery.mobile" name="mobile">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Note</label>
+        <input type="text" class="form-control" id="note" required [(ngModel)]="prodQuery.note" name="note">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Email</label>
+        <input type="text" class="form-control" id="emailId" required [(ngModel)]="prodQuery.emailId" name="emailId">
+      </div>
+
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+</div>
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>

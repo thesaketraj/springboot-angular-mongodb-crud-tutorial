@@ -1,0 +1,54 @@
+<h3>Customer Query Details</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmitProdQuery()">
+    <div class="form-group">
+      <label for="name">Email</label>
+      <input type="text" class="form-control" id="emailId" required [(ngModel)]="prodQuery.emailId" name="emailId"
+        readonly>
+    </div>
+    <div class="form-group">
+      <label for="name">First Name</label>
+      <input type="text" class="form-control" id="firstName" required [(ngModel)]="prodQuery.firstName"
+        name="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Last Name</label>
+      <input type="text" class="form-control" id="lastName" required [(ngModel)]="prodQuery.lastName" name="lastName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Customer Remarks</label>
+      <input type="text" class="form-control" id="note" required [(ngModel)]="prodQuery.note" name="note" readonly>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Agent Remarks</label>
+      <input type="text" class="form-control" id="agentRemarks" required [(ngModel)]="prodQuery.agentRemarks" name="agentRemarks" >
+    </div>
+
+    <div>
+      <label for="isResolved">Resolved:</label>
+      <select name="isResolved" class="form-control" id="isResolved" required [(ngModel)]="prodQuery.isResolved">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="currentStatus">Status:</label>
+      <select name="currentStatus" class="form-control" id="currentStatus" required [(ngModel)]="prodQuery.currentStatus">
+        <option value="Pending">Pending</option>
+        <option value="Resolved">Resolved</option>
+        <option value="Closed">Closed</option>
+      </select>
+    </div>
+    
+    <br/>
+
+
+
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

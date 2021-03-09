@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Spring Boot + Angular + MongoDB CRUD Example Tutorial';
+  title = 'MM Ticket Dashbpoard';
 }
+
+

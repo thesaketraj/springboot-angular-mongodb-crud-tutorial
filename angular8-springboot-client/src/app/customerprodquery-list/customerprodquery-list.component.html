@@ -1,0 +1,35 @@
+<div class="panel panel-primary" style="margin-left: 178px;">
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Query List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Actions</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let prodQuery of prodQuery | async">
+          <td>{{prodQuery.firstName}}</td>
+          <td>{{prodQuery.lastName}}</td>
+          <td>{{prodQuery.emailId}}</td>
+          <td>
+            <!-- <button (click)="deleteCustomerProductQuery(prodQueryDetails.id)" class="btn btn-danger">Delete</button> -->
+            <button (click)="updateCustomerProdQueryStatus(prodQuery.id)" class="btn btn-info"
+              style="margin-left: 10px">Update</button>
+            <button (click)="customerProdQueryDetails(prodQuery.id)" class="btn btn-info"
+              style="margin-left: 10px">Details</button>
+          </td>
+        </tr>
+      </tbody>
+      
+    </table>
+  </div>
+</div>
+</div>
